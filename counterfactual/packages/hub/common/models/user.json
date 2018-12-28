@@ -1,0 +1,87 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "restrictResetPasswordTokenScope": true,
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "logout"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "findById"
+    }
+  ],
+  "methods": {},
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "required": false
+    },
+    "googleId": {
+      "type": "string"
+    },
+    "contractStatus": {
+      "type": "string"
+    },
+    "contractAddress": {
+      "type": "string"
+    },
+    "balance": {
+      "type": "string"
+    },
+    "salt": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "applications": {
+      "type": "hasMany",
+      "model": "application",
+      "foreignKey": "userId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "channels": {
+      "type": "hasMany",
+      "model": "channel",
+      "foreignKey": "account",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "accessToken",
+      "foreignKey": "userId",
+      "options": {
+        "disableInclude": true
+      }
+    }
+  }
+}
