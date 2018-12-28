@@ -1,0 +1,21 @@
+{
+  "name": "spotethfy",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "amount": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": { },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "state-channels-poc",
+  "version": "1.0.0",
+  "description": "PoC for state channels",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build",
+    "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.md\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "lint": "npm run prettier:check",
+    "lint:fix": "npm run prettier:fix",
+    "prestart": "npm run build",
+    "start": "lerna run start",
+    "ganache": "lerna run ganache",
+    "migrate": "lerna run truffle:migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunchBadger/statechannels.git"
+  },
+  "author": "James, Albert, Raymond",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LunchBadger/statechannels/issues"
+  },
+  "homepage": "https://github.com/LunchBadger/statechannels#readme",
+  "devDependencies": {
+    "lerna": "^3.4.0",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {}
+}

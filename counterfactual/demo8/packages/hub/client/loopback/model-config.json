@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "sources": [
+      "../../common/models",
+      "./models"
+    ]
+  },
+  "message": {
+    "dataSource": "remote"
+  },
+  "channel": {
+    "dataSource": "remote"
+  },
+  "user": {
+    "dataSource": "remote"
+  },
+  "application": {
+    "dataSource": "remote"
+  },
+  "accessToken": {
+    "dataSource": "remote"
+  }
+}
