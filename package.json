@@ -1,7 +1,7 @@
 {
-  "name": "state-channels-poc",
+  "name": "payment-channel-demo",
   "version": "1.0.0",
-  "description": "PoC for state channels",
+  "description": "payment channel demo",
   "engines": {
     "node": ">=10"
   },
@@ -20,18 +20,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LunchBadger/statechannels.git"
+    "url": "git+https://github.com/levelkdev/payment-channel-demo.git"
   },
   "author": "James, Albert, Raymond",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LunchBadger/statechannels/issues"
+    "url": "https://github.com/levelkdev/payment-channel-demo/issues"
   },
-  "homepage": "https://github.com/LunchBadger/statechannels#readme",
+  "homepage": "https://github.com/levelkdev/payment-channel-demo#readme",
   "devDependencies": {
     "lerna": "^3.4.0",
     "prettier": "^1.14.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

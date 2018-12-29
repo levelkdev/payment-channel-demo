@@ -18,7 +18,7 @@ It contains the following packages:
 
 ```sh
 git clone git@github.com:levelk/payment-channel-demo.git
-cd statechannels
+cd payment-channel-demo
 git submodule init
 git submodule update
 npm i
